@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/footify/data-api/issues"
   },
-  "homepage": "https://github.com/footify/data-api#readme"
+  "homepage": "https://github.com/footify/data-api#readme",
+  "dependencies": {
+    "joi": "^10.4.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.9.7"
+  },
+  "files": [
+    "index.js",
+    "lib/"
+  ]
 }

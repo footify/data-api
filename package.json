@@ -1,5 +1,5 @@
 {
-  "name": "data-api",
+  "name": "footify/data-api",
   "version": "1.0.0",
   "description": "Data api for footify platform",
   "main": "index.js",

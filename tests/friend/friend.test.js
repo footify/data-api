@@ -59,8 +59,14 @@ describe("Ensuring that Friend model, schema and db calls are working", () => {
   });
 
   it('should return a friend list', () => {
-    return Friends.getFriends(userTest1._id).then((friendList) => {
+    return Friends.getMyFriends(userTest1._id).then((friendList) => {
       expect(friendList.friends.length).toBe(1);
+    });
+  });
+
+  it('should deny an invitation', () => {
+    return Friends.denyFriend(userTest2._id, userTest1._id).then((res) => {
+      expect(res.result.ok).toBe(1);
     });
   });
 

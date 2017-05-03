@@ -71,9 +71,7 @@ describe("Ensuring that User model, schema and db calls are working", () => {
 
   it('should ensure that Users can get updated by email', () => {
     return Users.updateByEmail("test@gmail.com", {firstName: "Tutu"}).then((user) => {
-      //  console.log(user);
-      //  expect(user.firstName).toBe("Tutu");
-      // expect(true).ToBe(true);
+       expect(user.firstName).toBe("Tutu");
     });
   });
 

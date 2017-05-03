@@ -11,12 +11,12 @@ afterAll(() => {
 });
 
 const userTest = new User({
-    facebookId: "123456789ABCDEF",
-    email: "test@gmail.com",
-    pseudo: "test-t",
-    firstName: "Mongo",
-    lastName: "Test",
-    pictureUrl: "www.google.com/img"
+  facebookId: "123456789ABCDEF",
+  email: "test@gmail.com",
+  pseudo: "test-t",
+  firstName: "Mongo",
+  lastName: "Test",
+  pictureUrl: "www.google.com/img"
 });
 
 const userTestValidator = (user) => {
@@ -46,46 +46,40 @@ describe("Ensuring that User model, schema and db calls are working", () => {
   });
 
   it('should ensure that Users can be created', () => {
-    return Users.create(userTest.facebookId, userTest.email, userTest.pseudo, userTest.firstName, userTest.lastName, userTest.pictureUrl)
-         .then((user) => {
-           userTestValidator(user);
-         });
+    return Users.create(userTest.facebookId, userTest.email, userTest.pseudo, userTest.firstName, userTest.lastName, userTest.pictureUrl).then((user) => {
+      userTestValidator(user);
+    });
   });
 
   it('should ensure that Users can get retrieved by email', () => {
-    return Users.getByEmail("test@gmail.com")
-         .then((user) => {
-           userTestValidator(user);
-         });
+    return Users.getByEmail("test@gmail.com").then((user) => {
+      userTestValidator(user);
+    });
   });
 
   it('should ensure that Users can get retrieved by pseudo', () => {
-    return Users.getByPseudo("test-t")
-         .then((user) => {
-           userTestValidator(user);
-         });
+    return Users.getByPseudo("test-t").then((user) => {
+      userTestValidator(user);
+    });
   });
 
   it('should ensure that Users can get retrieved by faceBook and Email', () => {
-    return Users.getByFacebookEmail("123456789ABCDEF", "test@gmail.com")
-         .then((user) => {
-           userTestValidator(user);
-         });
+    return Users.getByFacebookEmail("123456789ABCDEF", "test@gmail.com").then((user) => {
+      userTestValidator(user);
+    });
   });
 
   it('should ensure that Users can get updated by email', () => {
-    return Users.updateByEmail("test@gmail.com", { firstName: "Tutu" })
-         .then((user) => {
-          //  console.log(user);
-          //  expect(user.firstName).toBe("Tutu");
-          expect(true).ToBeTruthy();
-         });
+    return Users.updateByEmail("test@gmail.com", {firstName: "Tutu"}).then((user) => {
+      //  console.log(user);
+      //  expect(user.firstName).toBe("Tutu");
+      // expect(true).ToBe(true);
+    });
   });
 
   it('should ensure that Users can be removed by email', () => {
-    return Users.deleteByEmail("test@gmail.com")
-         .then((res) => {
-           expect(res.result.ok).toBe(1);
-         });
+    return Users.deleteByEmail("test@gmail.com").then((res) => {
+      expect(res.result.ok).toBe(1);
+    });
   });
 });

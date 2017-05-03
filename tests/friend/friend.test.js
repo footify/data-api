@@ -23,10 +23,10 @@ let userTest2 = new User({
 
 beforeAll(() => {
   mongoose.connect("mongodb://footifydb:27017");
-  return Users.create(userTest1.facebookId, userTest1.email, userTest1.pseudo, userTest1.firstName, userTest1.lastName, userTest1.pictureUrl)
+  return Users.create(userTest1)
     .then((user) => {
       userTest1 = user;
-      return Users.create(userTest2.facebookId, userTest2.email, userTest2.pseudo, userTest2.firstName, userTest2.lastName, userTest2.pictureUrl);
+      return Users.create(userTest2);
     }).then((user) => userTest2 = user);
 });
 

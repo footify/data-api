@@ -46,7 +46,7 @@ describe("Ensuring that User model, schema and db calls are working", () => {
   });
 
   it('should ensure that Users can be created', () => {
-    return Users.create(userTest.facebookId, userTest.email, userTest.pseudo, userTest.firstName, userTest.lastName, userTest.pictureUrl).then((user) => {
+    return Users.create(userTest).then((user) => {
       userTestValidator(user);
     });
   });

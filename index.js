@@ -23,7 +23,15 @@ module.exports = {
     clientRepository: require('./lib/auth/client.repository'),
     refreshTokenModel: require('./lib/auth/refresh-token.model'),
     refreshTokenRepository: require('./lib/auth/refresh-token.repository'),
+<<<<<<< HEAD
+    userModel: require('./lib/user/user.model'),
+    userRepository: require('./lib/user/user.repository'),
+    userSchema: require('./lib/user/user.schema'),
+    utils: require('./lib/utils'),
+};
+=======
     teamModel: require('./lib/team/team.model'),
     teamRepository: require('./lib/team/team.repository'),
     utils: require('./lib/utils')
 };
+>>>>>>> 5d9e6f20bab410017e0fa897cb367fdad3bb5a22

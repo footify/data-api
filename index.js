@@ -11,5 +11,4 @@ module.exports = {
     userRepository: require('./lib/user/user.repository'),
     userSchema: require('./lib/user/user.schema'),
     utils: require('./lib/utils'),
-
 };

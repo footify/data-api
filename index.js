@@ -1,6 +1,7 @@
 module.exports = {
-  teamModel: require('./lib/team/team.model'),
-  teamRepository: require('./lib/team/team.repository'),
+  userModel: require('./lib/user/user.model'),
+  userRepository: require('./lib/user/user.repository'),
+  userSchema: require('./lib/user/user.schema'),
   pubModel: require('./lib/pub/pub.model'),
   pubRepository: require('./lib/pub/pub.repository'),
   ligueModel: require('./lib/ligue/ligue.model'),
@@ -20,8 +21,7 @@ module.exports = {
   clientRepository: require('./lib/auth/client.repository'),
   refreshTokenModel: require('./lib/auth/refresh-token.model'),
   refreshTokenRepository: require('./lib/auth/refresh-token.repository'),
-  userModel: require('./lib/user/user.model'),
-  userRepository: require('./lib/user/user.repository'),
-  userSchema: require('./lib/user/user.schema'),
+  teamModel: require('./lib/team/team.model'),
+  teamRepository: require('./lib/team/team.repository'),
   utils: require('./lib/utils')
 };

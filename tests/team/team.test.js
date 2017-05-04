@@ -4,7 +4,7 @@
 // const Users = require('../../lib/user/user.repository');
 //
 // let teamTest = {
-//       players: [],
+//       players1: "",
 //       name: "Terminators"
 // };
 //
